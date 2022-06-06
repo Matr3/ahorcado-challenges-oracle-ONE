@@ -33,3 +33,9 @@ function sonidoVictory(){
       etiquetaAudio.setAttribute("src", "audio/victoria.mp3");
       etiquetaAudio.play();
 }
+function sonidoVientoStop(){
+    let etiquetaAudio = document.createElement("audio");
+      etiquetaAudio.setAttribute("src", "audio/viento.mp3");
+      etiquetaAudio.stop();
+      
+}
