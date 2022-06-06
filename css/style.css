@@ -1,0 +1,208 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F3F5FC;
+    /*background-color: black;*/
+}
+header{
+    margin: 0 auto;
+    padding: 20px 0;
+}
+main{
+    background-color: none;
+    height: 100%;
+    width: 100%;
+}
+
+.stars{
+    display: relative;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    resize: horizontal;
+    -webkit-animation: displace 150s linear infinite;
+    animation: displace 150s linear infinite;
+}
+.luna{
+    display: relative;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    resize: horizontal;
+    -webkit-animation: displace 130s linear infinite;
+    animation: displace 130s linear infinite;
+}
+
+.nubes{
+    display: relative;
+    background-size: 3448px 100%;
+    resize: horizontal;
+    -webkit-animation: displace 50s linear infinite;
+    animation: displace 50s linear infinite;
+}
+
+@-webkit-keyframes displace {
+    from { background-position: left top;
+    } to { background-position: 3448px top; }
+}
+@keyframes displace {
+    from { background-position: left top;
+    } to { background-position: 3448px top; }
+}
+
+.bosque{
+  
+    background-position: top;
+    background: no-repeat;
+    background-size: 800px auto;
+}
+
+.dibujo{
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+}
+.botonera-principal{
+    text-align: center;
+    background-color: none;
+}
+.botonera-principal li{
+    margin: 20px 20px;
+}
+.botonera-agregar-palabra{
+    text-align: center;
+}
+.botonera-agregar-palabra li{
+    margin: 20px 20px;
+}
+.btAz{
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: #0A3871;
+    width: 328px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    padding: 8px;
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0);
+}
+.btAz:hover{
+    color: #0A3871;
+    background-color: #E5E5E5;
+}
+.btBl{
+    color: #0A3871;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: #E5E5E5;
+    width: 328px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    padding: 8px;
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0);
+}
+.btBl:hover{
+    color: white;
+    background-color: #0A3871;
+    
+}
+.palabra, .palabra-error{
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+}
+.nuevaPalabra{
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+}
+#frase, #nuevaFrase{
+    font-size: 32px;
+    text-align: center;
+    color: brown; 
+    width: 600px;
+         
+}
+#error{
+    font-size: 32px;
+    text-align: center;
+    color: rgb(216, 209, 209);      
+}
+.frase-ahorcado{
+    background: transparent;
+    border-radius: 25px;
+    border: 3px solid brown;
+    width: 100%;
+}
+.letras-error{
+    color: white;
+    background: transparent;
+    border: transparent;
+    width: 100%;
+}
+.bt-inicio{
+    display: inline-block;
+}
+.bt-nuevo{
+    display:none;
+}
+.bt-desistir{
+    display: none;
+}
+.bt-agregar{
+    display: inline-block;
+}
+.bt-guardar{
+    display: none;
+}
+.bt-cancelar{
+    display:none;
+}
+.cajaTextoCondicion{
+    margin-left:30%;
+}
+.condicion li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.condicion p{
+    color: #495057;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    margin: 8px;
+}
+footer{
+    background-color: #0c0c0c;
+    text-align: center;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:60px;
+    width:100%;
+    
+}
+footer li{
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+footer a{
+    color: #858585;
+    font-weight: bold;
+    font-size: 14px;
+}
+.redimension{
+    max-width:40px;
+    max-height:40px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html  lang="es-419">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>El Juego del Ahorcado</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <p><img src="imagenes/Logo.png"></p>
+        </header>
+        <main>
+            <div class="stars">
+                <div class=luna>
+                    <div class="nubes">
+                        <div class="bosque">
+                            <div class="dibujo">
+                                <canvas id="ahorcado" width="1200" height="800"></canvas>
+                            </div>
+                            <div class="palabra">
+                                <label for="frase"></label>
+                                <textarea type="text" id="frase" class="frase-ahorcado"></textarea>
+                            </div>
+                            <div class="palabra-error">
+                                <label for="error"></label>
+                                <textarea type="text" id="error" class="letras-error"></textarea>
+                            </div>
+                            <div class="botonera-principal">
+                            <ul>
+                                <li class="bt-inicio"><input id="inicio"class="btAz" type="submit" value="Iniciar Juego"></li>
+                                <li class="bt-nuevo"><input id="nuevo"class="btAz" type="submit" value="Nuevo Juego"></li>
+                                <li class="bt-desistir"><input id="desistir" class="btBl" type="submit" value="Desistir"></li> 
+                            </ul> 
+                            </div>
+                            <div class="nuevaPalabra">
+                                <label for="nuevaFrase"></label>
+                                <input type="text" id="nuevaFrase" class="frase-ahorcado" placeholder="INGRESE UNA PALABRA" width="100%" maxlength="8" style="text-transform:uppercase">
+                                <ul class="condicion">
+                                    <li><img src="imagenes/Vectorsigno.png"></li>
+                                    <li><p>Max. de 8 Letras</p></li>
+                                </ul>
+                            </div>
+                            <div class="botonera-agregar-palabra">
+                                <ul>
+                                    <li class="bt-agregar"><input id="agregar" class="btBl" type="submit" value="Agregar Palabra"></li>
+                                    <li class="bt-guardar"><input id="guardar" class="btAz" type="submit" value="Guardar y Empezar"></li>
+                                    <li class="bt-cancelar"><input id="cancelar" class="btBl" type="submit" value="Cancelar"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li><img src="imagenes/pngegg.png" class="redimension"></li>
+                <li><a href="https://github.com/Matr3">/MaTr3</a> </li>
+            </ul>
+        </footer>
+    </body>
+
+    <script src="js/botonera.js"></script>
+    <script src="js/ahorcado.js"></script>
+    <script src="js/palabras.js"></script>
+    <script src="js/sonidos.js"></script>
+
+</html>
