@@ -117,24 +117,29 @@ function ubicacionPalabra(confirmarLetraCorrecta){
 function guardarPalabra(palabraNueva){
     var condicion = true;
     const vacio = "";
-    palabraNueva = palabraNueva.toUpperCase();
-    if(palabraNueva != vacio){
-        for(let y = 0; y < palabrasJuego.length; y++){
-        palabraComparacion = palabrasJuego[y]; 
-           
-            if(palabraComparacion === palabraNueva){
-                condicion = false;
-                alert("Ya existe esta palabra");
-                break;
+    var palabraNueva = palabraNueva.toUpperCase();
+    var letraComparacion = [];
+    
+    for(let o = 0; o < palabraNueva.length; o++){
+        letraComparacion = palabraNueva[o];
+        if((palabraNueva != vacio) && (letrasValidas.includes(letraComparacion))){
+            
+            for(let y = 0; y < palabrasJuego.length; y++){
+            var palabraComparacion = palabrasJuego[y]; 
+            
+                if(palabraComparacion === palabraNueva){
+                        condicion = false;
+                        alert("Ya existe esta palabra");
+                        break;
+                }
             }
-        }
-    }else{
+        }else{
         alert("INGRESE UNA PALABRA");
         condicion = false;
-    } 
+        }
+    }
     if(condicion == true){
         palabrasJuego.push(palabraNueva);
-        console.log(palabrasJuego);
         estilosGuardar();
         inicio();
         sonidoPlay();
@@ -194,7 +199,6 @@ function play(){
             if(!letraError.includes(text)){
                 var confirmarLetraCorrecta = palabraSecretaAhorcado(text);         
                 ubicacionPalabra(confirmarLetraCorrecta);
-                console.log("cantidad de acierto con letra: " + aciertoLetra + " y la cantidad de acierto de palabra que tiene que tener es: " + aciertoPalabra);
                 ganarahorcado();
                 cajaAhorcado();
             }

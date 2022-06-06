@@ -206,3 +206,19 @@ footer a{
     max-width:40px;
     max-height:40px;
 }
+@media screen and (max-width:480px){
+    main{
+        width: auto;
+    }
+    .bosque{
+        width: 100%;
+        height: 100%;
+    }
+    #ahorcado{
+        width: 100%;
+        height: 100%;
+    }
+    #nuevaFrase, #frase{
+        width: auto;
+    }
+}
