@@ -116,34 +116,46 @@ function ubicacionPalabra(confirmarLetraCorrecta){
 
 function guardarPalabra(palabraNueva){
     var condicion = true;
-    const vacio = "";
+    var condicionLetra = true;
+
     var palabraNueva = palabraNueva.toUpperCase();
     var letraComparacion = [];
     
     for(let o = 0; o < palabraNueva.length; o++){
         letraComparacion = palabraNueva[o];
-        if((palabraNueva != vacio) && (letrasValidas.includes(letraComparacion))){
-            
-            for(let y = 0; y < palabrasJuego.length; y++){
-            var palabraComparacion = palabrasJuego[y]; 
-            
-                if(palabraComparacion === palabraNueva){
-                        condicion = false;
-                        alert("Ya existe esta palabra");
-                        break;
-                }
-            }
+        if(!letrasValidas.includes(letraComparacion)){
+        condicionLetra = false;
+        alert("ingrese un caracter valido");
+        break;
+        
         }else{
-        alert("INGRESE UNA PALABRA");
-        condicion = false;
+            condicionLetra = true;
         }
     }
-    if(condicion == true){
+    for(let y = 0; y < palabrasJuego.length; y++){
+        var palabraComparacion = palabrasJuego[y]; 
+        
+        if(palabraComparacion === palabraNueva){
+            condicion = false;
+            alert("Ya existe esta palabra");
+            break;
+        }else{
+            condicion = true;
+        }
+    }
+    if(palabraNueva === ''){
+        alert("Ingrese una palabra");
+    }
+    else if((condicion === true) && (condicionLetra === true)){
         palabrasJuego.push(palabraNueva);
         estilosGuardar();
         inicio();
         sonidoPlay();
     }
+    
+    
+    
+   
 }
 
 
