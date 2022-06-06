@@ -53,7 +53,7 @@ btGuardar.addEventListener("click", function(codificacion){
     codificacion.preventDefault();
     var palabraNueva = document.querySelector("#nuevaFrase").value;
     guardarPalabra(palabraNueva);
-    estilosGuardar();
+
 });
 
 var btCancelar = document.querySelector("#cancelar");
