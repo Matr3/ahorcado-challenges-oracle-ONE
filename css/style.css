@@ -52,8 +52,7 @@ main{
 .bosque{
   
     background-position: top;
-    background: no-repeat;
-    background-size: 800px auto;
+    background-size: 800px 100%;
 }
 
 .dibujo{
@@ -146,7 +145,7 @@ main{
     color: white;
     background: transparent;
     border: transparent;
-    width: 100%;
+    width: auto;
 }
 .bt-inicio{
     display: inline-block;
