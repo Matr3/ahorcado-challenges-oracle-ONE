@@ -53,7 +53,7 @@ btGuardar.addEventListener("click", function(codificacion){
     codificacion.preventDefault();
     var palabraNueva = document.querySelector("#nuevaFrase").value;
     guardarPalabra(palabraNueva);
-    
+    estilosGuardar();
 });
 
 var btCancelar = document.querySelector("#cancelar");
@@ -72,6 +72,7 @@ function estilosGuardar(){
     document.querySelector("body").style.backgroundColor = "black";
     document.querySelector("main").style.backgroundColor = "#2b0f3b";
     document.querySelector(".stars").style.background = "url('./imagenes/star.png') repeat-x left top";
+    document.querySelector(".luna").style.background = "url('./imagenes/luna.png') no-repeat left top";
     document.querySelector(".nubes").style.background = "url('./imagenes/cloud-2.png') repeat-x left top";
     document.querySelector(".bosque").style.background = "url('./imagenes/fondo.png') no-repeat left top";
     document.querySelector(".bosque").style.backgroundSize = "auto 100%";
