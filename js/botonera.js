@@ -33,7 +33,6 @@ var btDesistir = document.querySelector("#desistir");
 btDesistir.addEventListener("click", function(codificacion){
     codificacion.preventDefault();
     sonidoClick();
-    sonidoVientoStop();
     setTimeout(desistirJuego, 500);
 });
 
