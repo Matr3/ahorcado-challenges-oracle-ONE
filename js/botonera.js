@@ -2,11 +2,10 @@ var btInicio = document.querySelector("#inicio");
 btInicio.addEventListener("click", function(codificacion){
     codificacion.preventDefault();
     document.querySelector("body").style.backgroundColor = "black";
-    document.querySelector("main").style.backgroundColor = "#2b0f3b";
     document.querySelector(".stars").style.background = "url('./imagenes/star.png') repeat-x left top";
     document.querySelector(".luna").style.background = "url('./imagenes/luna.png') no-repeat left top";
     document.querySelector(".nubes").style.background = "url('./imagenes/cloud-2.png') repeat-x left top";
-    document.querySelector(".bosque").style.background = "url('./imagenes/fondo.png') repeat-x left top";
+    document.querySelector(".bosque").style.background = "url('./imagenes/fondo.png') no-repeat center top";
     document.querySelector(".bosque").style.backgroundSize = "auto 100%";
     document.querySelector(".dibujo").style.display = "block";
     document.querySelector(".palabra").style.display = "block";
@@ -70,11 +69,10 @@ btCancelar.addEventListener("click", function(codificacion){
 function estilosGuardar(){
     
     document.querySelector("body").style.backgroundColor = "black";
-    document.querySelector("main").style.backgroundColor = "#2b0f3b";
     document.querySelector(".stars").style.background = "url('./imagenes/star.png') repeat-x left top";
     document.querySelector(".luna").style.background = "url('./imagenes/luna.png') no-repeat left top";
     document.querySelector(".nubes").style.background = "url('./imagenes/cloud-2.png') repeat-x left top";
-    document.querySelector(".bosque").style.background = "url('./imagenes/fondo.png') repeat-x left top";
+    document.querySelector(".bosque").style.background = "url('./imagenes/fondo.png') no-repeat center top";
     document.querySelector(".bosque").style.backgroundSize = "auto 100%";
     document.querySelector(".dibujo").style.display = "block";
     document.querySelector(".palabra").style.display = "block";
